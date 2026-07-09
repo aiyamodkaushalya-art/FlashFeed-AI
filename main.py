@@ -8,7 +8,7 @@ from moviepy.editor import ImageClip, AudioFileClip
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 async def generate_script(topic):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     prompt = f"Write a 30-second YouTube Short script about '{topic}' in Sinhala. Use an engaging and energetic tone."
     response = model.generate_content(prompt)
     return response.text
